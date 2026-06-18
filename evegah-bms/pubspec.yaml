@@ -1,0 +1,65 @@
+name: evegah_maintenance
+description: "EVagah Employee Operations App"
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Navigation
+  go_router: ^16.0.0
+
+  # Networking
+  dio: ^5.9.0
+
+  # Local Storage
+  flutter_secure_storage: ^9.2.4
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Firebase
+  firebase_core: ^4.1.0
+  firebase_messaging: ^16.0.0
+  firebase_crashlytics: ^5.0.0
+
+  # Maps & Location
+  google_maps_flutter: ^2.12.3
+  geolocator: ^14.0.2
+
+  # Charts
+  fl_chart: ^1.0.0
+
+  # Utilities
+  logger: ^2.6.1
+  intl: ^0.20.2
+  permission_handler: ^12.0.1
+  flutter_blue_plus: ^2.3.7
+  flutter_tts: ^4.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+  build_runner: ^2.7.0
+  json_serializable: ^6.11.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo.png
+    - assets/images/
+    - assets/icons/
