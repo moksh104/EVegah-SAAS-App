@@ -60,7 +60,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     {
       "name": "City",
       "price": "₹39/hr",
-      "image": "assets/black_scooter_city.png",
+      "image": "assets/black_scooter_city.png", // Make sure you have this asset or change it
       "badge": "Most Popular",
       "badgeBg": 0xFFECFDF5,
       "badgeText": 0xFF059669,
@@ -69,7 +69,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     {
       "name": "Fly",
       "price": "₹49/hr",
-      "image": "assets/kick_scooter_fly.png",
+      "image": "assets/kick_scooter_fly.png", // Make sure you have this asset or change it
       "badge": "Best for Long Rides",
       "badgeBg": 0xFFEFF6FF,
       "badgeText": 0xFF2563EB,
@@ -86,30 +86,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-            // --- 1. NOTIFICATION BELL ROW (Logo removed) ---
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 14, 20, 8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      // 🚨 WRAPPED THE STACK IN A GESTURE DETECTOR
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const NotificationScreen()),
-                          );
-                        },
-                        child: Stack(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                border: Border.all(color: const Color(0xFFE2E8F0)),
-                              ),
-                              child: const Icon(Icons.notifications_outlined, color: Colors.black, size: 20),
               // --- 1. TOP HEADER (Location & Bell) ---
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 14, 20, 8),
@@ -138,47 +114,43 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ],
                       ),
                     ),
-                    // Notification bell icon with red dot badge
-                    Stack(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: const Color(0xFFE2E8F0)),
-                          ),
-                          child: const Icon(Icons.notifications_none_rounded, color: Colors.black, size: 20),
-                        ),
-                        Positioned(
-                          top: 4,
-                          right: 4,
-                          child: Container(
-                            width: 8,
-                            height: 8,
-                            decoration: const BoxDecoration(
-                              color: Colors.red,
+                    
+                    // 🚨 WIRED UP: Notification bell icon with red dot badge
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const NotificationScreen()),
+                        );
+                      },
+                      child: Stack(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
                               shape: BoxShape.circle,
+                              border: Border.all(color: const Color(0xFFE2E8F0)),
                             ),
-                            Positioned(
-                              top: 4,
-                              right: 4,
-                              child: Container(
-                                width: 8,
-                                height: 8,
-                                decoration: const BoxDecoration(
-                                  color: Colors.red,
-                                  shape: BoxShape.circle,
-                                ),
+                            child: const Icon(Icons.notifications_none_rounded, color: Colors.black, size: 20),
+                          ),
+                          Positioned(
+                            top: 4,
+                            right: 4,
+                            child: Container(
+                              width: 8,
+                              height: 8,
+                              decoration: const BoxDecoration(
+                                color: Colors.red,
+                                shape: BoxShape.circle,
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              // --- 2. TOP SELECTOR BAR ---
               ),
 
               const SizedBox(height: 12),
@@ -788,7 +760,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               child: Opacity(
                                 opacity: 0.9,
                                 child: Image.asset(
-                                  "assets/gift_box_refer.png",
+                                  "assets/gift_box_refer.png", // Make sure this image exists
                                   width: 55,
                                   height: 55,
                                   fit: BoxFit.contain,
