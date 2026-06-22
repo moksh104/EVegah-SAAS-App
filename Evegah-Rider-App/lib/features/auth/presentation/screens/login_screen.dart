@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'otp_screen.dart';
-import 'create_profile_screen.dart';
 import '../../../../core/services/auth_service.dart';
 import '../../../../core/constants/app_constants.dart';
 
